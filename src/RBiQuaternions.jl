@@ -1,5 +1,16 @@
 module RBiQuaternions
 
-# Write your package code here.
+using Random
+using LinearAlgebra
 
-end
+include("RBiQuaternion.jl")
+
+export RBiQuaternion
+export RBiQuaternionF16, RBiQuaternionF32, RBiQuaternionF64
+export rbiquat
+export splitr
+export splitc
+export e₁
+export e₂
+
+end # module
