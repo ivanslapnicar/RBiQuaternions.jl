@@ -4,8 +4,10 @@ Julia package of reduced biquaternions.
 [![Build Status](https://github.com/ivanslapnicar/RBiQuaternions.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/ivanslapnicar/RBiQuaternions.jl/actions/workflows/CI.yml?query=branch%3Amain)
 
 A reduced biquaternion $a \in\mathbb{Q}_\mathbb{R}$ can be uniquely expressed as
+
 $$
 a = a_0 + a_1 \mathbf{i} + a_2 \mathbf{j} + a_3 \mathbf{k},$$
+
 where $a_i \in \mathbb{R}$ for
 $i = 0, 1, 2, 3$, and 
 $$
