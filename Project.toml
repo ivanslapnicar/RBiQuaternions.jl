@@ -1,0 +1,13 @@
+name = "RBiQuaternions"
+uuid = "be7923c8-3e70-447d-8860-ce9fd1d8f58a"
+authors = ["Ivan Slapnicar"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.6.7"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
