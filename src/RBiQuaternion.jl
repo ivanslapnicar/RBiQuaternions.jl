@@ -31,7 +31,7 @@ Base.promote_rule(::Type{RBiQuaternion{T}}, ::Type{RBiQuaternion{S}}) where {T <
 
 # Added
 Base.isless(x::RBiQuaternion{T}, y::RBiQuaternion{T}) where T=Base.isless(abs(x),abs(y))
-LinearAlgebra.norm(x::Dual{T}) where T = Dual(norm(realpart(x)),norm(dualpart(x)))
+
 """
     rbiquat(w, [x, y, z])
 
