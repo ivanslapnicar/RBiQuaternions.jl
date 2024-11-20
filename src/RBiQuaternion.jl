@@ -29,6 +29,9 @@ RBiQuaternion(x::Real) = RBiQuaternion(x, zero(x), zero(x), zero(x))
 Base.promote_rule(::Type{RBiQuaternion{T}}, ::Type{S}) where {T <: Real, S <: Real} = RBiQuaternion{promote_type(T, S)}
 Base.promote_rule(::Type{RBiQuaternion{T}}, ::Type{RBiQuaternion{S}}) where {T <: Real, S <: Real} = RBiQuaternion{promote_type(T, S)}
 
+# Added
+Base.isless(x::RBiQuaternion{T}, y::RBiQuaternion{T}) where T=Base.isless(abs(x),abs(y))
+
 """
     rbiquat(w, [x, y, z])
 
