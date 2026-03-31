@@ -190,8 +190,10 @@ function Base.abs(q::RBiQuaternion)
     elseif iszero(a) || isinf(a)
         return a
     else
-        # return sqrt(abs2(q / a)) * a
-        return sqrt((q.s/a)^2+(q.v1/a)^2+(q.v2/a)^2+(q.v3/a)^2)*a
+        # return sqrt((q.s/a)^2+(q.v1/a)^2+(q.v2/a)^2+(q.v3/a)^2)*a
+        S = (q.s/a)^2+(q.v1/a)^2+(q.v2/a)^2+(q.v3/a)^2
+        R = 2*((q.s/a)*(q.v2/a)+(q.v1/a)*(q.v3/a))
+        return a*√√ ( (S+R)*(S-R) )
     end
 end
 
